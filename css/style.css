@@ -1,0 +1,39 @@
+/* selektor uniwersalny */
+* {
+    color: red;
+}
+
+/* selektor laczony */
+div.background {
+    background-color: green;
+}
+
+/* selektor bezposredniego potomka */
+li > a {
+    color: violet;
+}
+
+/* selektor potomka */
+li a {
+    color: black;
+    color: brown;
+}
+
+/* selektor bezposredniego rodzenstwa */
+nav + .background {
+    background-color: limegreen;
+}
+
+/* selektor rodzenstwa */
+nav ~ .background {
+    background-color: limegreen;
+}
+
+/* pseudoelementy */
+.background p::before {
+    content: '*';
+}
+
+.background p::after {
+    content: '*';
+}
