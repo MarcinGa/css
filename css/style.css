@@ -37,3 +37,186 @@ nav ~ .background {
 .background p::after {
     content: '*';
 }
+
+/* pseudoklasy */
+li a:hover {
+    color: black;
+}
+
+input:focus {
+    border: 1px solid black;
+    outline: 0;
+}
+
+ul li:first-child a {
+    color: violet;
+    border: 1px solid #000;
+    font-weight: 600;
+}
+
+ul li:last-child a {
+    color: violet;
+}
+
+ul span:first-of-type a {
+    color: yellow;
+}
+
+/* an + b - a co ile skaczemy, b od ktorego zaczynamy */
+ul li:nth-of-type(3n + 2) a {
+    color: orange;
+}
+
+/* selektory atrybutu */
+/* wszystkie ktore posiadaja dany atrybut */
+[type] {
+    background-color: gray;
+}
+
+/* konkretna wartosc atrybutu */
+input[title="pierwszy input"] {
+    background-color: orange;
+}
+
+/* wartosc oddzielona spacja */
+input[title~="input"] {
+    background-color: red;
+}
+
+/* czy znajduje sie dany ciag znakow */
+input[title*="ty"] {
+    background-color: aqua;
+}
+
+/* czy dany atrybut zaczyna sie na ciag znakow */
+input[title^="p"] {
+    background-color: green;
+}
+
+/* czy dany atrybut konczy sie na ciag znakow */
+input[title$="input"] {
+    background-color: olive;
+}
+
+/* hierarchia css */
+#main-nav .ul {
+    background-color: gray;
+}
+
+.main-nav #ul {
+    background-color: orange;
+}
+
+/* pozycjonowanie */
+.position {
+    position: relative;
+}
+
+.position-inner {
+    height: 200px;
+}
+
+.orange {
+    background-color: orange;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100%;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.main-nav {
+    /* position: fixed; */
+    z-index: 999999999;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+div.background {
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+}
+
+/* jednostki miary */
+#jednostki-miary {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+#jednostki-miary > div {
+    background-color: burlywood;
+    margin-bottom: 10px;
+}
+
+#piksele {
+    width: 400px;
+}
+
+#em {
+    width: 30em;
+}
+
+#procenty {
+    width: 50%;
+    font-size: 50%;
+}
+
+#vh {
+    width: 50vh;
+}
+
+#rem {
+    width: 50rem;
+}
+
+/* kolory */
+#heksadecymalny{
+    background-color: #ff0000; /*heksadecymalny*/
+    background-color: #f00; /*skrocony heksadecymalny*/
+    background-color: rgb(255, 0, 0); /* funkcja rgb */
+    background-color: rgba(255, 0, 0, 0.4); /* funkcja rgba */
+}
+
+/* wyswietlanie */
+.display {
+    text-align: center; /* centrowanie liniowych z bloku */
+    font-size: 0;
+}
+
+.display-inner {
+    height: 200px;
+    width: 200px;
+    background-color: #000;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/* float */
+.float-inner img {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/* tranzycje */
+.transition {
+    width: 300px;
+    height: 100px;
+    background-color: red;
+    /* transition-property: width;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in; */
+    transition: width .4s ease-in 0, background-color .4s ease-in .4s;
+}
+
+.transition:hover {
+    width: 600px;
+    background-color: blue;
+}
