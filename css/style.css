@@ -220,3 +220,15 @@ div.background {
     width: 600px;
     background-color: blue;
 }
+
+/* wlasciwosci tla */
+.background-property {
+    /* background-image: url('https://www.koty.pl/wp-content/uploads/2017/08/shutterstock_440190952-864x575.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+    background: url('https://www.koty.pl/wp-content/uploads/2017/08/shutterstock_440190952-864x575.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
